@@ -86,7 +86,6 @@
     color: #0a0a0a;
   }
 
-  /* ---------- glitter background ---------- */
   #glitter-canvas {
     position: fixed;
     inset: 0;
@@ -97,7 +96,6 @@
     opacity: 0.85;
   }
 
-  /* ---------- hero ---------- */
   .hero {
     position: relative;
     height: 92vh;
@@ -117,6 +115,7 @@
     filter: grayscale(1) contrast(1.05);
     will-change: transform;
     transform-origin: center;
+    background: #1a1a1a;
   }
 
   .hero::before {
@@ -192,7 +191,6 @@
     100% { opacity: 0; }
   }
 
-  /* ---------- layout / sections ---------- */
   main {
     position: relative;
     z-index: 2;
@@ -228,7 +226,6 @@
     white-space: nowrap;
   }
 
-  /* ---------- about ---------- */
   .about p {
     font-size: 1.02rem;
     line-height: 1.85;
@@ -243,7 +240,6 @@
     font-weight: 600;
   }
 
-  /* ---------- links ---------- */
   .links-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -319,7 +315,6 @@
     color: var(--accent);
   }
 
-  /* ---------- footer ---------- */
   footer {
     text-align: center;
     padding: 48px 24px 64px;
@@ -349,4 +344,192 @@
 <canvas id="glitter-canvas"></canvas>
 
 <div class="hero">
-  <img src="data:image/png;base64,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
+  <img src="assets/nacksgro.jpg" alt="NackSgro">
+  <div class="hero-content">
+    <span class="hero-kicker">Singer-Songwriter</span>
+    <h1>NackSgro</h1>
+    <p>DarkroomWhiteroom · Bangkok</p>
+  </div>
+  <div class="scroll-cue"><span></span></div>
+</div>
+
+<main>
+  <section class="about" data-aos="fade-up">
+    <div class="section-label"><h2>About</h2></div>
+    <p>Born and raised in Bangkok on December 7, 2000, <strong>NackSgro</strong> (แน็คสโกร) is a singer-songwriter whose life has been harmonized by music since his earliest years.</p>
+    <p>His artistic foundation was built on a series of vocal competitions starting in primary school, which later evolved into a decade-long commitment within his secondary school's international music ensemble from Grade 7 through Grade 12 — an immersion in performance and theory that ignited a lasting passion for vocal artistry and instrumental composition.</p>
+    <p>Now creating independently under <strong>DarkroomWhiteroom</strong>, NackSgro has entered a new era of creative refinement. While his debut EP in 2021 marked a significant milestone, he has since taken a deliberate, curated approach to his catalog — selectively retiring earlier work so his discography reflects his current artistic vision. New singles and long-awaited projects are set to arrive throughout 2026.</p>
+  </section>
+
+  <section class="links">
+    <div class="section-label" data-aos="fade-up"><h2>Listen &amp; Follow</h2></div>
+    <div class="links-grid">
+
+      <a class="link-card" href="https://open.spotify.com/artist/30uVR4kLcKzBZYXMLIri63" data-aos="fade-up" data-aos-delay="0">
+        <span class="link-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.24 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+        </span>
+        <span class="link-text">
+          <span class="platform-name">Spotify</span>
+          <span class="platform-category">Music</span>
+        </span>
+        <span class="link-arrow">→</span>
+      </a>
+
+      <a class="link-card" href="https://music.apple.com/th/artist/nacksgro/1548191002" data-aos="fade-up" data-aos-delay="60">
+        <span class="link-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.088 1.011 1.454 2.215 3.09 3.792 3.03 1.52-.06 2.09-.98 3.935-.98 1.831 0 2.35.98 3.96.95 1.637-.026 2.676-1.48 3.676-2.947 1.156-1.688 1.636-3.325 1.662-3.415-.036-.014-3.19-1.225-3.226-4.85-.026-3.03 2.47-4.478 2.583-4.546-1.41-2.078-3.61-2.31-4.38-2.36-1.996-.157-3.667 1.093-4.6 1.093zm3.442-3.146c.83-1.005 1.395-2.403 1.242-3.75-1.207.047-2.665.802-3.522 1.807-.771.87-1.445 2.298-1.264 3.65 1.316.101 2.664-.71 3.544-1.707z"/></svg>
+        </span>
+        <span class="link-text">
+          <span class="platform-name">Apple Music</span>
+          <span class="platform-category">Music</span>
+        </span>
+        <span class="link-arrow">→</span>
+      </a>
+
+      <a class="link-card" href="https://youtube.com/@nacksgro" data-aos="fade-up" data-aos-delay="120">
+        <span class="link-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </span>
+        <span class="link-text">
+          <span class="platform-name">YouTube</span>
+          <span class="platform-category">Video</span>
+        </span>
+        <span class="link-arrow">→</span>
+      </a>
+
+      <a class="link-card" href="https://www.tiktok.com/@nacksgro" data-aos="fade-up" data-aos-delay="180">
+        <span class="link-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.7 2.58-4.92 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+        </span>
+        <span class="link-text">
+          <span class="platform-name">TikTok</span>
+          <span class="platform-category">Video</span>
+        </span>
+        <span class="link-arrow">→</span>
+      </a>
+
+      <a class="link-card" href="https://x.com/nacksgro" data-aos="fade-up" data-aos-delay="240">
+        <span class="link-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </span>
+        <span class="link-text">
+          <span class="platform-name">X (Twitter)</span>
+          <span class="platform-category">Social</span>
+        </span>
+        <span class="link-arrow">→</span>
+      </a>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-name">NackSgro</div>
+  <div>© 2026 · DarkroomWhiteroom</div>
+</footer>
+
+<script>
+(function() {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var heroImg = document.querySelector('.hero img');
+  var heroContent = document.querySelector('.hero-content');
+  var hero = document.querySelector('.hero');
+
+  function onScroll() {
+    if (reduce || !hero) return;
+    var y = window.scrollY;
+    var heroHeight = hero.offsetHeight;
+    var progress = Math.min(y / heroHeight, 1);
+    heroImg.style.transform = 'translateY(' + (y * 0.25) + 'px) scale(' + (1 + progress * 0.06) + ')';
+    heroContent.style.opacity = String(Math.max(1 - progress * 1.4, 0));
+    heroContent.style.transform = 'translateY(' + (progress * 30) + 'px)';
+  }
+
+  window.addEventListener('scroll', function() {
+    requestAnimationFrame(onScroll);
+  }, { passive: true });
+
+  window.addEventListener('load', function() {
+    if (typeof AOS !== 'undefined') AOS.init({ once: true, duration: 700 });
+    onScroll();
+  });
+})();
+</script>
+
+<script>
+(function() {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var canvas = document.getElementById('glitter-canvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var dpr = Math.min(window.devicePixelRatio || 1, 2);
+  var particles = [];
+  var DENSITY = 0.00009;
+
+  function resize() {
+    canvas.width = window.innerWidth * dpr;
+    canvas.height = document.documentElement.scrollHeight * dpr;
+    canvas.style.width = window.innerWidth + 'px';
+    canvas.style.height = document.documentElement.scrollHeight + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    var count = Math.max(24, Math.floor(window.innerWidth * document.documentElement.scrollHeight * DENSITY));
+    count = Math.min(count, 90);
+    particles = [];
+    for (var i = 0; i < count; i++) {
+      particles.push({
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * document.documentElement.scrollHeight,
+        r: Math.random() * 0.8 + 0.5,
+        baseAlpha: Math.random() * 0.5 + 0.25,
+        speed: Math.random() * 0.015 + 0.006,
+        phase: Math.random() * Math.PI * 2
+      });
+    }
+  }
+
+  function drawStar(cx, cy, outerR, innerR, rotation) {
+    var spikes = 4;
+    ctx.beginPath();
+    var step = Math.PI / spikes;
+    var angle = rotation;
+    ctx.moveTo(cx + Math.cos(angle) * outerR, cy + Math.sin(angle) * outerR);
+    for (var i = 0; i < spikes; i++) {
+      angle += step;
+      ctx.lineTo(cx + Math.cos(angle) * innerR, cy + Math.sin(angle) * innerR);
+      angle += step;
+      ctx.lineTo(cx + Math.cos(angle) * outerR, cy + Math.sin(angle) * outerR);
+    }
+    ctx.closePath();
+  }
+
+  function draw(t) {
+    ctx.clearRect(0, 0, window.innerWidth, document.documentElement.scrollHeight);
+    for (var i = 0; i < particles.length; i++) {
+      var p = particles[i];
+      var twinkle = (Math.sin(t * p.speed + p.phase) + 1) / 2;
+      var alpha = p.baseAlpha * (0.35 + twinkle * 0.65);
+      var outerR = p.r * 2.2;
+      var innerR = outerR * 0.42;
+      ctx.fillStyle = 'rgba(255, 214, 51,' + alpha.toFixed(3) + ')';
+      ctx.shadowColor = 'rgba(255, 214, 51,' + (alpha * 0.9).toFixed(3) + ')';
+      ctx.shadowBlur = 5;
+      drawStar(p.x, p.y, outerR, innerR, p.phase);
+      ctx.fill();
+    }
+    if (!reduce) requestAnimationFrame(draw);
+  }
+
+  resize();
+  window.addEventListener('resize', resize);
+
+  if (reduce) {
+    draw(0);
+  } else {
+    requestAnimationFrame(draw);
+  }
+})();
+</script>
+
+</body>
+</html>
